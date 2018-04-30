@@ -35,6 +35,10 @@
 		      
 		      smex
 		      smartparens
+
+		      projectile
+		      helm-projectile
+		      
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
