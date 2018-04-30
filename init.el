@@ -35,6 +35,12 @@
 
 (global-hl-line-mode 1)
 
+(require 'smartparens-config)
+(add-hook 'js-mode-hook #'smartparens-mode)
+
+
+
+
 
 
 

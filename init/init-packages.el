@@ -32,7 +32,9 @@
 		      ;; solarized-theme
 		      popwin
 		      markdown-mode
+		      
 		      smex
+		      smartparens
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
