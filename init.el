@@ -5,8 +5,7 @@
 
 (require 'init-packages)
 (require 'init-ui)
-
-
+(require 'init-custom)
 
 
 
@@ -16,33 +15,8 @@
 
 
 
-
-
-
-;; 关闭缩进 (第二天中被去除)
-;; (electric-indent-mode -1)
-
-;; 更改显示字体大小 16pt
-;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
-
-;; 快速打开配置文件
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
-;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
-(global-set-key (kbd "<f2>") 'open-init-file)
-
-(global-hl-line-mode 1)
-
 (require 'smartparens-config)
 (add-hook 'js-mode-hook #'smartparens-mode)
-
-
-
-
-
-
 
 
 (require 'smex) ; Not needed if you use package.el
@@ -55,39 +29,12 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-(load-theme 'monokai 1)
 
-;;格式化整个文件函数
-(defun indent-whole ()
-  (interactive)
-  (indent-region (point-min) (point-max))
-  (message "format successfully"))
-;;绑定到F3键
-(global-set-key [f3] 'indent-whole)
-
-
-(setq auto-save-default nil)
 (add-hook 'after-init-hook 'global-company-mode)
 
-(require 'popwin)
-(popwin-mode 1)
-
-(setq auto-save-default nil)
 
 
 
-(require 'projectile)
 
-;; 默认全局使用
-(projectile-global-mode)
-;; 默认打开缓存
-(setq projectile-enable-caching t)
-;; 使用f5键打开默认文件搜索
-(global-set-key [f5] 'projectile-find-file)
 
-;;; recently opened file
-(require 'recentf)
-(setq recentf-max-saved-items 100)
-(recentf-mode 1)
-(recentf-open-files)
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+
