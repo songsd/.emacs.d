@@ -44,6 +44,7 @@
 
 		      neotree
 		      dracula-theme
+		      helm
 		      ) "Default packages")
 
 
