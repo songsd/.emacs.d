@@ -1,7 +1,16 @@
 
 
 (setq auto-save-default nil)
+(fset 'yes-or-no-p 'y-or-n-p)
 
+
+(setq-default abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+					    ;; Shifu
+					    ("8aa" "ssd")
+					    ;; Tudi
+					    ("8k8s" "Kubernetes")
+					    ))
 
 ;; shortcuts
 ;; 快速打开配置文件
@@ -33,3 +42,21 @@
 (global-set-key [f5] 'projectile-find-file)
 
 (provide 'init-custom)
+
+
+(setq hippie-expand-try-function-list '(try-expand-debbrev
+					try-expand-debbrev-all-buffers
+					try-expand-debbrev-from-kill
+					try-complete-file-name-partially
+					try-complete-file-name
+					try-expand-all-abbrevs
+					try-expand-list
+					try-expand-line
+					try-complete-lisp-symbol-partially
+					try-complete-lisp-symbol))
+
+(global-set-key (kbd "s-/") 'hippie-expand)
+
+
+(require 'dired-x)
+

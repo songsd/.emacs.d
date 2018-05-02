@@ -38,7 +38,12 @@
 
 		      projectile
 		      helm-projectile
-		      
+
+		      web-mode
+		      cider
+
+		      neotree
+		      dracula-theme
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
@@ -56,3 +61,10 @@
       (package-install pkg))))
 
 (provide 'init-packages)
+
+
+(setq auto-mode-alist
+      (append
+       '(("\\.js\\'" . js2-mode))
+       '(("\\.html\\'" . web-mode))
+       auto-mode-alist))
