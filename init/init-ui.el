@@ -43,4 +43,6 @@
 
 (load-theme 'monokai 1)
 
+(setq neo-theme (if (display-graphic-p) 'ascii 'ascii))
+
 (provide 'init-ui)
