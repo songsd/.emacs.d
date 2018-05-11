@@ -41,8 +41,12 @@
 
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
-(load-theme 'monokai 1)
+;(load-theme 'monokai 1)
 
 (setq neo-theme (if (display-graphic-p) 'ascii 'ascii))
 
+(neotree-toggle)
+(neotree-dir "~/.emacs.d/")
+
+(load-theme 'dracula 1)
 (provide 'init-ui)

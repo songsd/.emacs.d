@@ -7,6 +7,10 @@
 (require 'evil)
 (evil-mode 1)
 
+(delete-selection-mode 1)
+
+(global-hl-line-mode 1)
+
 (require 'smartparens-config)
 (add-hook 'js-mode-hook #'smartparens-mode)
 

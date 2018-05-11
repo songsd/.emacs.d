@@ -9,7 +9,7 @@
 (require 'init-custom)
 (require 'init-keybinds)
 (require 'init-better-default)
-
+(require 'init-org)
 
 ;; Find Executable Path on OS X
 (when (memq window-system '(mac ns))
@@ -17,7 +17,16 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-(neotree-toggle)
-(neotree-dir "~/.emacs.d/")
+
 ;;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
+	
+(setq make-backup-files nil)
+(global-auto-revert-mode 1)
+
+
+;; 设置 org-agenda 打开快捷键
+(global-set-key (kbd "C-c a") 'org-agenda)
+(require 'multiple-cursors)
+
+(require 'magit)

@@ -22,7 +22,6 @@
 (global-set-key (kbd "<f2>") 'open-init-file)
 
 
-
 (require 'popwin)
 (popwin-mode 1)
 
@@ -57,6 +56,14 @@
 
 (global-set-key (kbd "s-/") 'hippie-expand)
 
+
+;;格式化整个文件函数
+(defun indent-whole ()
+  (interactive)
+  (indent-region (point-min) (point-max))
+  (message "format successfully"))
+;;绑定到F3键
+(global-set-key [f3] 'indent-whole)
 
 (require 'dired-x)
 

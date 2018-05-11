@@ -46,6 +46,8 @@
 		      dracula-theme
 		      helm
 		      evil
+		      multiple-cursors
+		      magit
 		      ) "Default packages")
 
 
