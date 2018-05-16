@@ -48,6 +48,7 @@
 		      evil
 		      multiple-cursors
 		      magit
+		      javap-mode
 		      ) "Default packages")
 
 
