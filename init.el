@@ -10,6 +10,7 @@
 (require 'init-keybinds)
 (require 'init-better-default)
 (require 'init-org)
+(require 'javap-mode)
 
 ;; Find Executable Path on OS X
 (when (memq window-system '(mac ns))
